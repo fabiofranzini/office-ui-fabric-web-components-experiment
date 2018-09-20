@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <script src="//cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,es6,Array.prototype.includes"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.1/custom-elements-es5-adapter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.1/webcomponents-sd-ce.js"></script>
+  <title>Office UI Fabric Web Components Experiment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    fieldset {
+      border-style: solid;
+      border-width: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <header>
+    <h1>Experiment about wrap the "Office UI Fabric" React components as Web Components</h1>
+  </header>
+  <fieldset>
+    <legend>Experiment using "extends HTMLElement" (vanilla js)</legend>
+    <section>
+      <header>
+        <h3><u>TextField</u></h2>
+      </header>
+      <oui-vanilla-text-field label="Text Field Label" value="Value"></oui-vanilla-text-field>
+    </section>
+  </fieldset>
+  <fieldset>
+    <legend>Experiment using "web-react-components" library</legend>
+    <section>
+      <header>
+        <h3><u>Buttons</u></h2>
+      </header>
+      <oui-default-button text="Test (primary)" primary></oui-default-button>
+      <oui-default-button text="Test"></oui-default-button>
+      <oui-default-button text="Click Me (Attribute)" onClick="alert('Clicked!!');" primary></oui-default-button>
+      <oui-default-button text="Click Me (Attach Event)" id="ouiButton" primary></oui-default-button>
+      <script>
+        var ouiButton = document.getElementById('ouiButton').addEventListener('click', function (e) {
+          alert('Clicked!!');
+          e.preventDefault();
+        });
+      </script>
+    </section>
+    <section>
+      <header>
+        <h3><u>TextField</u></h2>
+      </header>
+      <oui-text-field label="Text Field Label" value="Value">
+        </oui-default-button>
+    </section>
+    <section>
+      <header>
+        <h3><u>Rating</u></h2>
+      </header>
+      <oui-rating min="1" max="10" size="0" rating="7"></oui-rating>
+      <oui-rating min="1" max="5" size="1" rating="4"></oui-rating>
+    </section>
+  </fieldset>
+</body>
+
+</html>

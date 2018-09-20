@@ -1,0 +1,18 @@
+{
+  "name": "office-ui-fabric-web-components-experiment",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "office-ui-fabric-react": "^6.71.0",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-scripts": "1.1.5",
+    "web-react-components": "^1.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
