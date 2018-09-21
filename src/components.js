@@ -21,29 +21,38 @@ register(
         '!!primary',
         'text',
         'onClick()'
-    ], 
-    { }, 
-    {
+    ], {}, {
         useShadowDOM: false
     }
 );
 // ----------
 
 // TextFields.TextField
-const ouiTextField = ({ label, value, onChange }) => (
-    <TextFields.TextField label={label} value={value} onChange={onChange} />
+const ouiTextField = ({
+    label,
+    value,
+    onChange
+}) => ( <
+    TextFields.TextField label = {
+        label
+    }
+    value = {
+        value
+    }
+    onChange = {
+        onChange
+    }
+    />
 );
 
 register(
-    ouiTextField, 
-    'oui-text-field', 
+    ouiTextField,
+    'oui-text-field',
     [
-        'label', 
-        'value', 
+        'label',
+        'value',
         'onChange()'
-    ], 
-    { },
-    { 
+    ], {}, {
         useShadowDOM: false
     }
 );
@@ -51,20 +60,18 @@ register(
 
 // Ratings.Rating
 register(
-    Ratings.Rating, 
-    'oui-rating', 
+    Ratings.Rating,
+    'oui-rating',
     [
-        'min', 
-        'max', 
-        'size', 
-        'rating', 
-        'onChanged()', 
-        'onFocus()', 
+        'min',
+        'max',
+        'size',
+        'rating',
+        'onChanged()',
+        'onFocus()',
         'onBlur()'
-    ],
-    { },
-    { 
-        useShadowDOM: false 
+    ], {}, {
+        useShadowDOM: false
     }
 );
 // ----------
